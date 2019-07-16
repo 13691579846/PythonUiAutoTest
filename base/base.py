@@ -55,7 +55,7 @@ class Base(object):
             wait = WebDriverWait(self.driver, self.timeout)
             element = wait.until(lambda driver: driver.find_element(by, location))
         except (NoSuchElementException, TimeoutException) as e:
-            logger.info('定位元素失败:{}'.format(e))
+            logger.error('定位元素失败:{}'.format(e))
         else:
             return element
 

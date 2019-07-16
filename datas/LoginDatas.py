@@ -36,6 +36,11 @@ class LoginData(object):
             'user': '',
             'pwd': '',
             'expect': '请输入手机号'
+        },
+        {
+            'user': '12345678901',
+            'pwd': 'python',
+            'expect': '请输入正确的手机号'
         }
     ]
 
