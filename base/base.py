@@ -9,7 +9,6 @@
 @GROUP: 878565760
 ------------------------------------
 """
-from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import (NoSuchElementException,
@@ -18,12 +17,23 @@ from selenium.common.exceptions import (NoSuchElementException,
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.remote.webelement import WebElement
 
+from common.RecordLog import logger
+
 
 class Base(object):
 
-    def __init__(self, driver, timeout=30):
+    def __init__(self, driver):
         self.driver = driver
-        self.timeout = timeout
+        self.timeout = 30
+        self.base_url = 'http://120.78.128.25:8765'
+
+    def _open(self, url=None):
+        url = url or self.base_url
+        self.driver.get(url)
+        logger.info('访问测试地址:{}'.format(url))
+
+    def open(self, url=None):
+        self._open(url)
 
     def find_element(self, by: str, location: str) -> WebElement:
         """
@@ -187,12 +197,4 @@ class Base(object):
 
 
 if __name__ == '__main__':
-    d = webdriver.Firefox()
-    d.get('https://www.baidu.com')
-    su = ('XPATH', '//*[@id="su"]')
-    kw = ('xpath', '//*[@id="kw"]')
-    base = Base(d)
-    element_kw = base.find_element(*kw)
-    element_su = base.find_element(*su)
-    element_kw.send_keys('python')
-    element_su.click()
+    pass
