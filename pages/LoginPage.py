@@ -10,40 +10,51 @@
 ------------------------------------
 """
 from base.base import Base
+from common.ParseConfig import ParseConfig
+from config.config import CONFIG_PATH
 
 
 class LoginPage(Base):
 
-    phone_input = ('xpath', '//input[@name = "phone"]')
-    password_input = ('xpath', '// input[@name = "password"]')
-    v_code = ('xpath', '//input[@name = "vcode"]')
-    v_code_img = ('xpath', '//img[@class ="verify-img"]')
-    login_button = ('xpath', '//button[text()="登录"]')
+    config = ParseConfig(CONFIG_PATH)
+    url = config('TestUrl', 'url')
+    phone_input = config('LoginPage', 'phone_input')  # 用户名输入框
+    password_input = config('LoginPage', 'password_input')  # 密码输入框
+    login_button = config('LoginPage', 'login_button')  # 登录按钮
+
+    login_success_info = config('LoginPage', 'login_success_info')
+    format_error_info = config('LoginPage', 'format_error_info')  # 帐号或密码格式错误
+    phone_password_error = config('LoginPage', 'phone_password_error')  # 帐号或密码错误
 
     def login(self, phone: str, password: str):
         self.input_user(phone)
         self.input_password(password)
         self.click_login()
 
+    def open_url(self):
+        self.open(self.url)
+
     def input_user(self, phone: str):
-        self.send_keys(*self.phone_input, phone)
+        self.send_keys(*self.phone_input, value=phone)
 
     def input_password(self, password: str):
-        self.send_keys(*self.password_input, password)
+        self.send_keys(*self.password_input, value=password)
 
     def click_login(self):
         self.click(*self.login_button)
 
-    def assert_error_info(self):
-        pass
+    def get_phone_pwd_format_info(self):
+        value = self.get_element_text(*self.format_error_info)
+        return value
+
+    def get_phone_pwd_error_info(self):
+        value = self.get_element_text(*self.phone_password_error)
+        return value
+
+    def get_login_success_info(self):
+        value = self.get_element_text(*self.login_success_info)
+        return value
 
 
 if __name__ == '__main__':
-    from selenium import webdriver
-    from pages.HomePage import HomePage
-    driver = webdriver.Firefox()
-    home = HomePage(driver)
-    login = LoginPage(driver)
-    driver.get('http://120.78.128.25:8765/')
-    home.click_login()
-    login.login('13691579841', 'python')
+    pass
