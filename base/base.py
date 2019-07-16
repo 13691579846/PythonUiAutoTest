@@ -13,7 +13,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import (NoSuchElementException,
                                         TimeoutException,
-                                        NoAlertPresentException)
+                                        NoAlertPresentException,
+                                        InvalidArgumentException)
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.remote.webelement import WebElement
 
@@ -28,9 +29,13 @@ class Base(object):
         self.base_url = 'http://120.78.128.25:8765'
 
     def _open(self, url=None):
-        url = url or self.base_url
-        self.driver.get(url)
-        logger.info('访问测试地址:{}'.format(url))
+        try:
+            url = url or self.base_url
+            self.driver.get(url)
+        except InvalidArgumentException as e:
+            logger.error('加载测试地址{}失败:{}'.format(url, e))
+        else:
+            logger.info('加载测试地址:{}'.format(url))
 
     def open(self, url=None):
         self._open(url)
@@ -50,8 +55,9 @@ class Base(object):
             wait = WebDriverWait(self.driver, self.timeout)
             element = wait.until(lambda driver: driver.find_element(by, location))
         except (NoSuchElementException, TimeoutException) as e:
-            raise e
-        return element
+            logger.info('定位元素失败:{}'.format(e))
+        else:
+            return element
 
     def find_elements(self, by: str, location: str) -> list:
         """
@@ -68,8 +74,9 @@ class Base(object):
             wait = WebDriverWait(self.driver, self.timeout)
             elements = wait.until(lambda driver: driver.find_elements(by, location))
         except (NoSuchElementException, TimeoutException) as e:
-            raise e
-        return elements
+            logger.info('定位一组元素失败:{}'.format(e))
+        else:
+            return elements
 
     def is_element_exist(self, by: str, location: str) -> bool:
         """
@@ -82,7 +89,8 @@ class Base(object):
         try:
             wait = WebDriverWait(self.driver, self.timeout)
             wait.until(ec.visibility_of_element_located((by, location)))
-        except (NoSuchElementException, TimeoutException):
+        except (NoSuchElementException, TimeoutException) as e:
+            logger.debug('元素不存在:{}'.format(e))
             return False
         return True
 
@@ -95,7 +103,8 @@ class Base(object):
         try:
             wait = WebDriverWait(self.driver, self.timeout)
             alert = wait.until(ec.alert_is_present())
-        except (TimeoutException, NoAlertPresentException):
+        except (TimeoutException, NoAlertPresentException) as e:
+            logger.debug('alert 不存在:{}'.format(e))
             return False
         return alert
 
@@ -110,7 +119,8 @@ class Base(object):
             by = by.lower()
             wait = WebDriverWait(self.driver, self.timeout)
             element = wait.until(ec.element_to_be_clickable((by, location)))
-        except (TimeoutException, NoSuchElementException):
+        except (TimeoutException, NoSuchElementException) as e:
+            logger.debug('元素{}不可点击:{}'.format(location, e))
             return False
         return element
 
@@ -136,7 +146,7 @@ class Base(object):
             wait = WebDriverWait(self.driver, self.timeout)
             wait.until(ec.frame_to_be_available_and_switch_to_it((by, location)))
         except (TimeoutException, NoSuchElementException) as e:
-            raise e
+            logger.error("切换iframe失败：{}".format(e))
         else:
             return True
 
@@ -151,7 +161,7 @@ class Base(object):
         if element:
             element.click()
         else:
-            print('the element not clickable')
+            logger.error('元素{}不可点击'.format(location))
 
     def send_keys(self, by: str, location: str, value: str) -> bool:
         """
@@ -165,9 +175,11 @@ class Base(object):
             element = self.find_element(by, location)
             element.clear()
             element.send_keys(value)
-        except (NoSuchElementException, TimeoutException):
-            return False
-        return True
+        except (NoSuchElementException, TimeoutException) as e:
+            logger.error("{}输入数据{}失败:{}".format(location, value, e))
+        else:
+            logger.info("输入框{}输入数据{}".format(location, value))
+            return True
 
     def get_element_text(self, by: str, location: str):
         """
@@ -179,9 +191,12 @@ class Base(object):
         try:
             by = by.lower()
             element = self.find_element(by, location)
-            return element.text
-        except (NoSuchElementException, TimeoutException):
-            return False
+            value = element.text
+        except (NoSuchElementException, TimeoutException) as e:
+            logger.error("获取元素{}文本内容失败:{}".format(location, e))
+        else:
+            logger.info("获取元素文本内容:{}".format(value))
+            return value
 
     def move_to_element(self, by: str, location: str):
         """
@@ -190,6 +205,7 @@ class Base(object):
         :param location: //*[@by="location"]
         :return: action
         """
+
         element = self.find_element(by, location)
         action = ActionChains(self.driver)
         action.move_to_element(element).perform()

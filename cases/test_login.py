@@ -11,10 +11,12 @@
 """
 import unittest
 from selenium import webdriver
+import inspect
 
 from pages.LoginPage import LoginPage
 from datas.LoginDatas import LoginData
 from libs.ddt import ddt, data
+from common.RecordLog import logger
 
 
 @ddt
@@ -22,8 +24,13 @@ class TestLogin(unittest.TestCase):
     """登录测试用例"""
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Firefox()
-        cls.driver.maximize_window()
+        try:
+            cls.driver = webdriver.Firefox()
+            cls.driver.maximize_window()
+        except Exception as e:
+            logger.error('打开登陆器失败:{}', format(e))
+        else:
+            logger.info("打开登陆器:{}".format(cls.driver.name))
         cls.login = LoginPage(cls.driver)
 
     def setUp(self):
@@ -33,19 +40,37 @@ class TestLogin(unittest.TestCase):
     def test_login_success(self, value):
         self.login.login(value['user'], value['pwd'])
         actual = self.login.get_login_success_info()
-        self.assertEqual(value['expect'], actual, msg='断言失败')
+        try:
+            self.assertEqual(value['expect'], actual, msg='断言失败')
+        except AssertionError as e:
+            logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            raise e
+        else:
+            logger.info("测试{}通过".format(inspect.stack()[0][3]))
 
     @data(*LoginData.login_format_data)
     def test_login_format_error(self, value):
         self.login.login(value['user'], value['pwd'])
         actual = self.login.get_phone_pwd_format_info()
-        self.assertEqual(value['expect'], actual, msg='断言失败')
+        try:
+            self.assertEqual(value['expect'], actual, msg='断言失败')
+        except AssertionError as e:
+            logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            raise e
+        else:
+            logger.info("测试{}通过".format(inspect.stack()[0][3]))
 
     @data(*LoginData.login_account_error_data)
     def test_login_account_error(self, value):
         self.login.login(value['user'], value['pwd'])
         actual = self.login.get_phone_pwd_error_info()
-        self.assertEqual(value['expect'], actual, msg='断言失败')
+        try:
+            self.assertEqual(value['expect'], actual, msg='断言失败')
+        except AssertionError as e:
+            logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            raise e
+        else:
+            logger.info("测试{}通过".format(inspect.stack()[0][3]))
 
     def tearDown(self):
         self.driver.delete_all_cookies()
@@ -53,6 +78,7 @@ class TestLogin(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
+        logger.info("关闭浏览器")
 
 
 if __name__ == '__main__':
