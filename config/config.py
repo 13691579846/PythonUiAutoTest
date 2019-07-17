@@ -22,12 +22,15 @@ DATA_DIR = os.path.join(PROJECT_DIR, 'datas')
 LOG_DIR = os.path.join(PROJECT_DIR, 'log')
 REPORT_DIR = os.path.join(PROJECT_DIR, 'report')
 CASE_DIR = os.path.join(PROJECT_DIR, 'cases')
+PAGES_DIR = os.path.join(PROJECT_DIR, 'pages')
+LOCATOR_DIR = os.path.join(PAGES_DIR, 'locator')
 """
 Test path of data and config file
 """
-OBJECT_LIBRARY_PATH = os.path.join(CONFIG_DIR, 'ObjectLibrary.ini')
+OBJECT_LIBRARY_PATH = os.path.join(CONFIG_DIR, 'locator.ini')
 PROJECT_CONFIG_PATH = os.path.join(CONFIG_DIR, 'ProjectConfig.ini')
 DATA_PATH = os.path.join(DATA_DIR, 'test_cases.xlsx')
+LOCATOR_PATH = os.path.join(LOCATOR_DIR, 'locator.ini')
 """
 Test environment info
 """

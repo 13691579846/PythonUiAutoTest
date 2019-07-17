@@ -236,3 +236,199 @@ Wed, 17 Jul 2019 09:18:10-common.RecordLog-base.py-[line:198]-INFO-[日志信息
 Wed, 17 Jul 2019 09:18:10-common.RecordLog-LoginPage.py-[line:63]-INFO-[日志信息]: 获取登录成功断言信息:我的帐户[python10]
 Wed, 17 Jul 2019 09:18:10-common.RecordLog-test_login.py-[line:65]-INFO-[日志信息]: 测试test_login_success通过
 Wed, 17 Jul 2019 09:18:11-common.RecordLog-test_login.py-[line:133]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 21:10:08-common.RecordLog-test_login.py-[line:39]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720551
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720551
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:此账号没有经过授权，请联系管理员!
+Wed, 17 Jul 2019 21:10:15-common.RecordLog-LoginPage.py-[line:60]-INFO-[日志信息]: 获取登陆失败断言信息:此账号没有经过授权，请联系管理员!
+Wed, 17 Jul 2019 21:10:16-common.RecordLog-test_login.py-[line:112]-ERROR-[日志信息]: 测试test_login_account_error失败:'帐号或密码错误!' != '此账号没有经过授权，请联系管理员!'
+- 帐号或密码错误!
++ 此账号没有经过授权，请联系管理员!
+ : 断言失败
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:pwd_error
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据pwd_error
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:帐号或密码错误!
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-LoginPage.py-[line:60]-INFO-[日志信息]: 获取登陆失败断言信息:帐号或密码错误!
+Wed, 17 Jul 2019 21:10:18-common.RecordLog-test_login.py-[line:120]-INFO-[日志信息]: 测试test_login_account_error通过
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720554
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720554
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:123456
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据123456
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:此账号没有经过授权，请联系管理员!
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-LoginPage.py-[line:60]-INFO-[日志信息]: 获取登陆失败断言信息:此账号没有经过授权，请联系管理员!
+Wed, 17 Jul 2019 21:10:20-common.RecordLog-test_login.py-[line:112]-ERROR-[日志信息]: 测试test_login_account_error失败:'用户不存在!' != '此账号没有经过授权，请联系管理员!'
+- 用户不存在!
++ 此账号没有经过授权，请联系管理员!
+ : 断言失败
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名: 
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据 
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:请输入手机号
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-LoginPage.py-[line:54]-INFO-[日志信息]: 获取登录失败断言信息:请输入手机号
+Wed, 17 Jul 2019 21:10:21-common.RecordLog-test_login.py-[line:92]-INFO-[日志信息]: 测试test_login_format_error通过
+Wed, 17 Jul 2019 21:10:22-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:22-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:22-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553
+Wed, 17 Jul 2019 21:10:22-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553
+Wed, 17 Jul 2019 21:10:22-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码: 
+Wed, 17 Jul 2019 21:10:22-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据 
+Wed, 17 Jul 2019 21:10:22-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:请输入密码
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-LoginPage.py-[line:54]-INFO-[日志信息]: 获取登录失败断言信息:请输入密码
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-test_login.py-[line:92]-INFO-[日志信息]: 测试test_login_format_error通过
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名: 
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据 
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码: 
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据 
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:请输入手机号
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-LoginPage.py-[line:54]-INFO-[日志信息]: 获取登录失败断言信息:请输入手机号
+Wed, 17 Jul 2019 21:10:24-common.RecordLog-test_login.py-[line:92]-INFO-[日志信息]: 测试test_login_format_error通过
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:12345678901
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据12345678901
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:请输入正确的手机号
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-LoginPage.py-[line:54]-INFO-[日志信息]: 获取登录失败断言信息:请输入正确的手机号
+Wed, 17 Jul 2019 21:10:25-common.RecordLog-test_login.py-[line:92]-INFO-[日志信息]: 测试test_login_format_error通过
+Wed, 17 Jul 2019 21:10:26-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 21:10:26-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 21:10:26-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553
+Wed, 17 Jul 2019 21:10:26-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553
+Wed, 17 Jul 2019 21:10:26-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 21:10:26-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 21:10:26-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 21:10:49-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:我的帐户[python10]
+Wed, 17 Jul 2019 21:10:49-common.RecordLog-LoginPage.py-[line:66]-INFO-[日志信息]: 获取登录成功断言信息:我的帐户[python10]
+Wed, 17 Jul 2019 21:10:49-common.RecordLog-test_login.py-[line:65]-INFO-[日志信息]: 测试test_login_success通过
+Wed, 17 Jul 2019 21:10:53-common.RecordLog-test_login.py-[line:133]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 22:48:24-common.RecordLog-test_invest.py-[line:41]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 22:48:29-common.RecordLog-test_invest.py-[line:61]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 22:48:57-common.RecordLog-test_invest.py-[line:41]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 22:48:59-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 22:48:59-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 22:48:59-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 22:48:59-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 22:48:59-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 22:48:59-common.RecordLog-base.py-[line:181]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 22:48:59-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 22:49:52-common.RecordLog-base.py-[line:198]-INFO-[日志信息]: 获取元素文本内容:投标
+Wed, 17 Jul 2019 22:49:55-common.RecordLog-test_invest.py-[line:61]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 22:54:00-common.RecordLog-test_invest.py-[line:41]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 22:54:03-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 22:54:03-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 22:54:03-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 22:54:03-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 22:54:03-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 22:54:04-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 22:54:04-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 22:54:49-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:投标
+Wed, 17 Jul 2019 22:54:51-common.RecordLog-test_invest.py-[line:61]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 22:56:32-common.RecordLog-test_invest.py-[line:41]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 22:56:34-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 22:56:34-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 22:56:34-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 22:56:34-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 22:56:34-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 22:56:35-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 22:56:35-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 22:57:21-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:投标
+Wed, 17 Jul 2019 22:57:21-common.RecordLog-test_invest.py-[line:61]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 22:59:16-common.RecordLog-test_invest.py-[line:41]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 22:59:18-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 22:59:18-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 22:59:18-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 22:59:19-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 22:59:19-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 22:59:20-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 22:59:20-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 23:00:07-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//div[contains(@class, "clearfix")]/input输入数据1
+Wed, 17 Jul 2019 23:00:37-common.RecordLog-base.py-[line:123]-DEBUG-[日志信息]: 元素//button[contains(@class, "btn-special")]不可点击:Message: 
+
+Wed, 17 Jul 2019 23:00:37-common.RecordLog-base.py-[line:164]-ERROR-[日志信息]: 元素//button[contains(@class, "btn-special")]不可点击
+Wed, 17 Jul 2019 23:00:37-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:请输入10的整数倍
+Wed, 17 Jul 2019 23:00:37-common.RecordLog-test_invest.py-[line:62]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 23:07:59-common.RecordLog-test_invest.py-[line:37]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 23:08:01-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 23:08:01-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 23:08:01-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 23:08:02-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 23:08:02-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 23:08:02-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 23:08:02-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 23:08:49-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//div[contains(@class, "clearfix")]/input输入数据1
+Wed, 17 Jul 2019 23:09:19-common.RecordLog-base.py-[line:123]-DEBUG-[日志信息]: 元素//button[contains(@class, "btn-special")]不可点击:Message: 
+
+Wed, 17 Jul 2019 23:09:19-common.RecordLog-base.py-[line:164]-ERROR-[日志信息]: 元素//button[contains(@class, "btn-special")]不可点击
+Wed, 17 Jul 2019 23:09:19-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:请输入10的整数倍
+Wed, 17 Jul 2019 23:09:19-common.RecordLog-test_invest.py-[line:59]-INFO-[日志信息]: 关闭浏览器
+Wed, 17 Jul 2019 23:26:03-common.RecordLog-test_invest.py-[line:37]-INFO-[日志信息]: 打开浏览器:firefox
+Wed, 17 Jul 2019 23:26:05-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 23:26:05-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 23:26:05-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 23:26:06-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 23:26:06-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 23:26:07-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 23:26:07-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 23:26:53-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//div[contains(@class, "clearfix")]/input输入数据0
+Wed, 17 Jul 2019 23:26:54-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:请正确填写投标金额
+Wed, 17 Jul 2019 23:26:54-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 23:26:54-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 23:26:54-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 23:26:55-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 23:26:55-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 23:26:55-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 23:26:55-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 23:27:41-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//div[contains(@class, "clearfix")]/input输入数据10
+Wed, 17 Jul 2019 23:27:41-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:投标金额必须为100的倍数
+Wed, 17 Jul 2019 23:27:41-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 23:27:41-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 23:27:41-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 23:27:42-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 23:27:42-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 23:27:43-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 23:27:43-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 23:28:27-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//div[contains(@class, "clearfix")]/input输入数据100
+Wed, 17 Jul 2019 23:28:28-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:购买标的金额不能大于标总金额
+Wed, 17 Jul 2019 23:28:28-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 23:28:28-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 23:28:28-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 23:28:29-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 23:28:29-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 23:28:29-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 23:28:29-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 23:29:14-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//div[contains(@class, "clearfix")]/input输入数据1
+Wed, 17 Jul 2019 23:29:44-common.RecordLog-base.py-[line:123]-DEBUG-[日志信息]: 元素//button[contains(@class, "btn-special")]不可点击:Message: 
+
+Wed, 17 Jul 2019 23:29:44-common.RecordLog-base.py-[line:164]-ERROR-[日志信息]: 元素//button[contains(@class, "btn-special")]不可点击
+Wed, 17 Jul 2019 23:29:44-common.RecordLog-base.py-[line:200]-INFO-[日志信息]: 获取元素文本内容:请输入10的整数倍
+Wed, 17 Jul 2019 23:29:45-common.RecordLog-base.py-[line:38]-INFO-[日志信息]: 加载测试地址:http://120.78.128.25:8765/Index/login.html
+Wed, 17 Jul 2019 23:29:45-common.RecordLog-LoginPage.py-[line:31]-INFO-[日志信息]: 开始登录
+Wed, 17 Jul 2019 23:29:45-common.RecordLog-LoginPage.py-[line:40]-INFO-[日志信息]: 输入用户名:18684720553 
+Wed, 17 Jul 2019 23:29:45-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="phone"]输入数据18684720553 
+Wed, 17 Jul 2019 23:29:45-common.RecordLog-LoginPage.py-[line:44]-INFO-[日志信息]: 输入密码:python
+Wed, 17 Jul 2019 23:29:46-common.RecordLog-base.py-[line:183]-INFO-[日志信息]: 输入框//input[@name="password"]输入数据python
+Wed, 17 Jul 2019 23:29:46-common.RecordLog-LoginPage.py-[line:48]-INFO-[日志信息]: 点击登录按钮
+Wed, 17 Jul 2019 23:30:31-common.RecordLog-test_invest.py-[line:66]-INFO-[日志信息]: 关闭浏览器

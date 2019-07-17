@@ -11,13 +11,13 @@
 """
 from base.base import Base
 from common.ParseConfig import ParseConfig
-from config.config import OBJECT_LIBRARY_PATH
+from config.config import LOCATOR_PATH
 from common.RecordLog import logger
 
 
 class LoginPage(Base):
 
-    config = ParseConfig(OBJECT_LIBRARY_PATH)
+    config = ParseConfig(LOCATOR_PATH)
     url = config('TestUrl', 'url')
     phone_input = config('LoginPage', 'phone_input')  # 用户名输入框
     password_input = config('LoginPage', 'password_input')  # 密码输入框
@@ -48,16 +48,19 @@ class LoginPage(Base):
         logger.info("点击登录按钮")
         self.click(*self.login_button)
 
+    @property
     def get_phone_pwd_format_info(self):
         value = self.get_element_text(*self.format_error_info)
         logger.info("获取登录失败断言信息:{}".format(value))
         return value
 
+    @property
     def get_phone_pwd_error_info(self):
         value = self.get_element_text(*self.phone_password_error)
         logger.info("获取登陆失败断言信息:{}".format(value))
         return value
 
+    @property
     def get_login_success_info(self):
         value = self.get_element_text(*self.login_success_info)
         logger.info("获取登录成功断言信息:{}".format(value))

@@ -23,7 +23,7 @@ def cases_suite():
     return suite
 
 
-if __name__ == '__main__':
+def main():
     CreateDir.create_dir(LOG_DIR)
     report_dir = CreateDir.create_dir(REPORT_DIR)
     report_filename = CreateDir.generate_filename('html')
@@ -35,3 +35,7 @@ if __name__ == '__main__':
                                 tester='linux超',
                                 verbosity=2)
         runner.run(cases_suite())
+
+
+if __name__ == '__main__':
+    main()

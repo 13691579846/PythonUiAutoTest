@@ -46,7 +46,7 @@ class TestLogin(unittest.TestCase):
     @data(*login_success_data)
     def test_login_success(self, value):
         self.login.login(value['user'], value['pwd'])
-        actual = self.login.get_login_success_info()
+        actual = self.login.get_login_success_info
         try:
             do_excel.write_cell('TestLoginSuccess',
                                 value['data_id'] + 1,
@@ -73,7 +73,7 @@ class TestLogin(unittest.TestCase):
     @data(*login_format_data)
     def test_login_format_error(self, value):
         self.login.login(value['user'], value['pwd'])
-        actual = self.login.get_phone_pwd_format_info()
+        actual = self.login.get_phone_pwd_format_info
         try:
             do_excel.write_cell('TestFormatLoginFail',
                                 value['data_id'] + 1,
@@ -101,7 +101,7 @@ class TestLogin(unittest.TestCase):
     def test_login_account_error(self, value):
         print(value['user'], value['pwd'])
         self.login.login(value['user'], value['pwd'])
-        actual = self.login.get_phone_pwd_error_info()
+        actual = self.login.get_phone_pwd_error_info
         try:
             do_excel.write_cell('TestAccountLoginFail',
                                 value['data_id'] + 1,

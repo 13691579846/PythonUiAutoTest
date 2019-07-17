@@ -39,6 +39,6 @@ class ParseConfig(ConfigParser):
 
 
 if __name__ == '__main__':
-    from config.config import OBJECT_LIBRARY_PATH
-    config = ParseConfig(OBJECT_LIBRARY_PATH)
+    from config.config import LOCATOR_PATH
+    config = ParseConfig(LOCATOR_PATH)
     print(config('LoginPage', 'phone_input'))

@@ -173,8 +173,10 @@ class Base(object):
         """
         try:
             element = self.find_element(by, location)
+            action = self.move_to_element_click(by, location)
             element.clear()
             element.send_keys(value)
+            action.reset_actions()
         except (NoSuchElementException, TimeoutException) as e:
             logger.error("{}输入数据{}失败:{}".format(location, value, e))
         else:
@@ -198,7 +200,7 @@ class Base(object):
             logger.info("获取元素文本内容:{}".format(value))
             return value
 
-    def move_to_element(self, by: str, location: str):
+    def move_to_element_click(self, by: str, location: str):
         """
         move mouse to element
         :param by: xpath, id, name, class with str
@@ -208,8 +210,11 @@ class Base(object):
 
         element = self.find_element(by, location)
         action = ActionChains(self.driver)
-        action.move_to_element(element).perform()
+        action.move_to_element(element).click(element).perform()
         return action
+
+    def execute_js(self, js):
+        self.driver.execute_script(js)
 
 
 if __name__ == '__main__':
