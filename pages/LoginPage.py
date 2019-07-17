@@ -11,13 +11,13 @@
 """
 from base.base import Base
 from common.ParseConfig import ParseConfig
-from config.config import CONFIG_PATH
+from config.config import OBJECT_LIBRARY_PATH
 from common.RecordLog import logger
 
 
 class LoginPage(Base):
 
-    config = ParseConfig(CONFIG_PATH)
+    config = ParseConfig(OBJECT_LIBRARY_PATH)
     url = config('TestUrl', 'url')
     phone_input = config('LoginPage', 'phone_input')  # 用户名输入框
     password_input = config('LoginPage', 'password_input')  # 密码输入框

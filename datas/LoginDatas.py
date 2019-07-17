@@ -54,6 +54,11 @@ class LoginData(object):
             'user': '18684720553',
             'pwd': 'pwd_error',
             'expect': '帐号或密码错误!'
+        },
+        {
+            'user': '13691579846',
+            'pwd': '123456',
+            'expect': '用户不存在!'
         }
     ]
 

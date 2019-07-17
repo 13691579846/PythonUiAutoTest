@@ -25,7 +25,8 @@ CASE_DIR = os.path.join(PROJECT_DIR, 'cases')
 """
 Test path of data and config file
 """
-CONFIG_PATH = os.path.join(CONFIG_DIR, 'ObjectLibrary.ini')
+OBJECT_LIBRARY_PATH = os.path.join(CONFIG_DIR, 'ObjectLibrary.ini')
+PROJECT_CONFIG_PATH = os.path.join(CONFIG_DIR, 'ProjectConfig.ini')
 DATA_PATH = os.path.join(DATA_DIR, 'test_cases.xlsx')
 """
 Test environment info

@@ -24,7 +24,7 @@ from common.ParseExcel import do_excel
 class TestLogin(unittest.TestCase):
     """登录测试用例"""
 
-    login_success_data = do_excel('TestLoginSucess')
+    login_success_data = do_excel('TestLoginSuccess')
     login_format_data = do_excel('TestFormatLoginFail')
     login_account_error_data = do_excel('TestAccountLoginFail')
 
@@ -48,12 +48,26 @@ class TestLogin(unittest.TestCase):
         self.login.login(value['user'], value['pwd'])
         actual = self.login.get_login_success_info()
         try:
+            do_excel.write_cell('TestLoginSuccess',
+                                value['data_id'] + 1,
+                                5,
+                                actual)
             self.assertEqual(value['expect'], actual, msg='断言失败')
         except AssertionError as e:
             logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            do_excel.write_cell('TestLoginSuccess',
+                                value['data_id'] + 1,
+                                6,
+                                'fail',
+                                color='red')
             raise e
         else:
             logger.info("测试{}通过".format(inspect.stack()[0][3]))
+            do_excel.write_cell('TestLoginSuccess',
+                                value['data_id'] + 1,
+                                6,
+                                'pass',
+                                color='green')
 
     # @data(*LoginData.login_format_data)
     @data(*login_format_data)
@@ -61,12 +75,26 @@ class TestLogin(unittest.TestCase):
         self.login.login(value['user'], value['pwd'])
         actual = self.login.get_phone_pwd_format_info()
         try:
+            do_excel.write_cell('TestFormatLoginFail',
+                                value['data_id'] + 1,
+                                5,
+                                actual)
             self.assertEqual(value['expect'], actual, msg='断言失败')
         except AssertionError as e:
             logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            do_excel.write_cell('TestFormatLoginFail',
+                                value['data_id'] + 1,
+                                6,
+                                'fail',
+                                color='red')
             raise e
         else:
             logger.info("测试{}通过".format(inspect.stack()[0][3]))
+            do_excel.write_cell('TestFormatLoginFail',
+                                value['data_id'] + 1,
+                                6,
+                                'pass',
+                                color='green')
 
     # @data(*LoginData.login_account_error_data)
     @data(*login_account_error_data)
@@ -75,12 +103,26 @@ class TestLogin(unittest.TestCase):
         self.login.login(value['user'], value['pwd'])
         actual = self.login.get_phone_pwd_error_info()
         try:
+            do_excel.write_cell('TestAccountLoginFail',
+                                value['data_id'] + 1,
+                                5,
+                                actual)
             self.assertEqual(value['expect'], actual, msg='断言失败')
         except AssertionError as e:
             logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            do_excel.write_cell('TestAccountLoginFail',
+                                value['data_id'] + 1,
+                                6,
+                                'fail',
+                                color='red')
             raise e
         else:
             logger.info("测试{}通过".format(inspect.stack()[0][3]))
+            do_excel.write_cell('TestAccountLoginFail',
+                                value['data_id'] + 1,
+                                6,
+                                'pass',
+                                color='green')
 
     def tearDown(self):
         self.driver.delete_all_cookies()
