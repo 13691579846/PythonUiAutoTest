@@ -94,7 +94,8 @@ class Base(object):
             return False
         return True
 
-    def is_alert_switch_to_alert(self):
+    @property
+    def is_alert_switch_to(self):
         """
         switch to alert if alert is present
         :return: alert if alert is present else False
@@ -130,7 +131,7 @@ class Base(object):
         get test of alert
         :return: text of alert
         """
-        alert = self.is_alert_switch_to_alert()
+        alert = self.is_alert_switch_to
         if alert:
             return alert.text
 
@@ -173,10 +174,8 @@ class Base(object):
         """
         try:
             element = self.find_element(by, location)
-            action = self.move_to_element_click(by, location)
             element.clear()
             element.send_keys(value)
-            action.reset_actions()
         except (NoSuchElementException, TimeoutException) as e:
             logger.error("{}输入数据{}失败:{}".format(location, value, e))
         else:
@@ -213,7 +212,9 @@ class Base(object):
         action.move_to_element(element).click(element).perform()
         return action
 
-    def execute_js(self, js):
+    def execute_window_scroll(self, x: str, y: str):
+        """滚动窗口"""
+        js = 'window.scrollTo(' + x + ',' + y + ')'
         self.driver.execute_script(js)
 
 

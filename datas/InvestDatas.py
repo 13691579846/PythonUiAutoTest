@@ -13,6 +13,13 @@
 
 class InvestData(object):
 
+    # 正确的用户名和密码
+    user_password = {
+            'phone': '18684720553',
+            'pwd': 'python'
+        }
+
+    # 测试金额大于0小于10及小于100的小数
     invest_amount_singular = [
         {
             'amount': '1',
@@ -20,10 +27,11 @@ class InvestData(object):
         },
         {
             'amount': '10.1',
-            'expect': '投标金额必须为100的倍数'
+            'expect': '请输入10的整数倍'
         }
     ]
 
+    # 测试金额为0，小于100整数，及大于标的剩余金额
     invest_amount_error = [
         {
             'amount': '0',

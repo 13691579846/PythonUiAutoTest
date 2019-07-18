@@ -315,9 +315,9 @@ function hide_img(obj){
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">Ui自动化测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> linux超</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-07-17 09:17:25</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:45.448200</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 8，通过 6，失败 2，通过率= 75.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-07-18 10:43:59</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:06:37.546002</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 14，通过 12，失败 2，通过率= 85.71%</p>
 
 <p class='description'>Windows Version:Windows10.0.1713410Python Versionv3.6.4:d48eceb</p>
 </div>
@@ -325,10 +325,10 @@ function hide_img(obj){
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 75.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 85.71% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 2 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 6 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 8 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 12 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 14 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -350,35 +350,81 @@ function hide_img(obj){
     <td style="width:200px">错误截图</td>
 </tr>
 
+<tr class='passClass warning'>
+    <td>cases.test_invest.TestInvest: 投资用例</td>
+    <td class="text-center">6</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',6)" class="detail" id='c1'>详细</a></td>
+        <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_amount_error_1</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td>无截图</td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_amount_error_2</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td>无截图</td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_amount_error_3</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td>无截图</td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_amount_singular_1</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td>无截图</td>
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_amount_singular_2</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td>无截图</td>
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_data</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td>无截图</td>
+</tr>
+
 <tr class='failClass warning'>
     <td>cases.test_login.TestLogin: 登录测试用例</td>
     <td class="text-center">8</td>
     <td class="text-center">6</td>
     <td class="text-center">2</td>
     <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',8)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',8)" class="detail" id='c2'>详细</a></td>
         <td>&nbsp;</td>
 </tr>
 
-<tr id='ft1_1' class='none'>
+<tr id='ft2_1' class='none'>
     <td class='failCase'><div class='testcase'>test_login_account_error_1</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou  -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
-    <div id='div_ft1_1' class="collapse">
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_1'>失败</button>
+    <div id='div_ft2_1' class="collapse">
 
     <!-- 默认展开错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
-    <div id='div_ft1_1' class="collapse in"> -->
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_1'>失败</button>
+    <div id='div_ft2_1' class="collapse in"> -->
     <pre>
     
-ft1_1: 18684720551 python
+ft2_1: 18684720551 python
 Traceback (most recent call last):
   File "D:\PythonUiAutoTest\libs\ddt.py", line 165, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\PythonUiAutoTest\cases\test_login.py", line 118, in test_login_account_error
+  File "D:\PythonUiAutoTest\cases\test_login.py", line 106, in test_login_account_error
     raise e
-  File "D:\PythonUiAutoTest\cases\test_login.py", line 110, in test_login_account_error
+  File "D:\PythonUiAutoTest\cases\test_login.py", line 98, in test_login_account_error
     self.assertEqual(value['expect'], actual, msg='断言失败')
 AssertionError: '帐号或密码错误!' != '此账号没有经过授权，请联系管理员!'
 - 帐号或密码错误!
@@ -400,34 +446,34 @@ AssertionError: '帐号或密码错误!' != '此账号没有经过授权，请�
     </td>
 </tr>
 
-<tr id='pt1_2' class='hiddenRow'>
+<tr id='pt2_2' class='hiddenRow'>
     <td class='passCase'><div class='testcase'>test_login_account_error_2</div></td>
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
     <td>无截图</td>
 </tr>
 
-<tr id='ft1_3' class='none'>
+<tr id='ft2_3' class='none'>
     <td class='failCase'><div class='testcase'>test_login_account_error_3</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou  -->
-    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_3'>失败</button>
-    <div id='div_ft1_3' class="collapse">
+    <button id='btn_ft2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_3'>失败</button>
+    <div id='div_ft2_3' class="collapse">
 
     <!-- 默认展开错误信息 -Findyou
-    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_3'>失败</button>
-    <div id='div_ft1_3' class="collapse in"> -->
+    <button id='btn_ft2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_3'>失败</button>
+    <div id='div_ft2_3' class="collapse in"> -->
     <pre>
     
-ft1_3: 18684720554 123456
+ft2_3: 18684720554 123456
 Traceback (most recent call last):
   File "D:\PythonUiAutoTest\libs\ddt.py", line 165, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\PythonUiAutoTest\cases\test_login.py", line 118, in test_login_account_error
+  File "D:\PythonUiAutoTest\cases\test_login.py", line 106, in test_login_account_error
     raise e
-  File "D:\PythonUiAutoTest\cases\test_login.py", line 110, in test_login_account_error
+  File "D:\PythonUiAutoTest\cases\test_login.py", line 98, in test_login_account_error
     self.assertEqual(value['expect'], actual, msg='断言失败')
-AssertionError: '此用户不存在!' != '此账号没有经过授权，请联系管理员!'
-- 此用户不存在!
+AssertionError: '用户不存在!' != '此账号没有经过授权，请联系管理员!'
+- 用户不存在!
 + 此账号没有经过授权，请联系管理员!
  : 断言失败
 
@@ -446,31 +492,31 @@ AssertionError: '此用户不存在!' != '此账号没有经过授权，请联�
     </td>
 </tr>
 
-<tr id='pt1_4' class='hiddenRow'>
+<tr id='pt2_4' class='hiddenRow'>
     <td class='passCase'><div class='testcase'>test_login_format_error_1</div></td>
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
     <td>无截图</td>
 </tr>
 
-<tr id='pt1_5' class='hiddenRow'>
+<tr id='pt2_5' class='hiddenRow'>
     <td class='passCase'><div class='testcase'>test_login_format_error_2</div></td>
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
     <td>无截图</td>
 </tr>
 
-<tr id='pt1_6' class='hiddenRow'>
+<tr id='pt2_6' class='hiddenRow'>
     <td class='passCase'><div class='testcase'>test_login_format_error_3</div></td>
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
     <td>无截图</td>
 </tr>
 
-<tr id='pt1_7' class='hiddenRow'>
+<tr id='pt2_7' class='hiddenRow'>
     <td class='passCase'><div class='testcase'>test_login_format_error_4</div></td>
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
     <td>无截图</td>
 </tr>
 
-<tr id='pt1_8' class='hiddenRow'>
+<tr id='pt2_8' class='hiddenRow'>
     <td class='passCase'><div class='testcase'>test_login_success_1</div></td>
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
     <td>无截图</td>
@@ -478,18 +524,18 @@ AssertionError: '此用户不存在!' != '此账号没有经过授权，请联�
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>8</td>
-    <td>6</td>
+    <td>14</td>
+    <td>12</td>
     <td>2</td>
     <td>0</td>
     <td>&nbsp;</td>
-    <td>通过率：75.00%</td>
+    <td>通过率：85.71%</td>
 </tr>
 </table>
 
 <script>
     showCase(1);
-    drawCircle(6, 2, 0);
+    drawCircle(12, 2, 0);
 </script>
 
 <div id='ending'>&nbsp;</div>

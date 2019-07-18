@@ -9,7 +9,7 @@
 @GROUP: 878565760
 ------------------------------------
 """
-from base.base import Base
+from pages.base.base import Base
 from common.ParseConfig import ParseConfig
 from config.config import LOCATOR_PATH
 from common.RecordLog import logger

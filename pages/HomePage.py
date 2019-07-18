@@ -9,7 +9,7 @@
 @GROUP: 878565760
 ------------------------------------
 """
-from base.base import Base
+from pages.base.base import Base
 from common.ParseConfig import ParseConfig
 from config.config import LOCATOR_PATH
 
@@ -21,9 +21,12 @@ class HomePage(Base):
 
     @property
     def invest_button(self):
+        """抢投标按钮"""
         return self.find_elements(*self.knock_invest_button)[0]
 
     def click_knock_invest_button(self):
+        """点击抢投标按钮"""
+        self.execute_window_scroll('0', '300')
         self.invest_button.click()
 
 

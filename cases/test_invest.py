@@ -10,60 +10,51 @@
 ------------------------------------
 """
 import unittest
-from selenium import webdriver
 import inspect
 
-from pages.LoginPage import LoginPage
-from pages.HomePage import HomePage
-from pages.LoanPage import LoanPage
+from cases.unit_test.unit_test import MyUnitTest
 from datas.InvestDatas import InvestData
 from libs.ddt import ddt, data
 from common.RecordLog import logger
-from common.ParseExcel import do_excel
 
 
 @ddt
-class TestLogin(unittest.TestCase):
-    """登录测试用例"""
-
-    @classmethod
-    def setUpClass(cls):
-        try:
-            cls.driver = webdriver.Firefox()
-            cls.driver.maximize_window()
-        except Exception as e:
-            logger.error('打开浏览器失败:{}', format(e))
-        else:
-            logger.info("打开浏览器:{}".format(cls.driver.name))
-        cls.home_page = HomePage(cls.driver)
-        cls.login_page = LoginPage(cls.driver)
-        cls.loan_page = LoanPage(cls.driver)
+class TestInvest(MyUnitTest):
+    """投资用例"""
+    test_data = InvestData
 
     def setUp(self):
         self.login_page.open_url()
-        self.login_page.login('18684720553 ', 'python')
+        self.login_page.login(self.test_data.user_password['phone'],
+                              self.test_data.user_password['pwd'])
         self.home_page.click_knock_invest_button()
 
-    @data(*InvestData.invest_amount_singular)
+    @data(*test_data.invest_amount_singular)
     def test_amount_singular(self, value):
-        """测试投资金额为大于0的单数"""
         self.loan_page.invest(value['amount'])
         actual = self.loan_page.get_error_info
-        self.assertEqual(value['expect'], actual)
+        try:
+            self.assertEqual(value['expect'], actual)
+        except AssertionError as e:
+            logger.error("投资用例{}测试失败{}".format(inspect.stack()[0][1], e))
+            raise e
+        else:
+            logger.info("投资用例{}测试通过".format(inspect.stack()[0][1]))
 
-    @data(*InvestData.invest_amount_error)
+    @data(*test_data.invest_amount_error)
     def test_amount_error(self, value):
         self.loan_page.invest(value['amount'])
         actual = self.loan_page.get_error_alert
-        self.assertEqual(value['expect'], actual)
+        try:
+            self.assertEqual(value['expect'], actual)
+        except AssertionError as e:
+            logger.error("投资用例{}测试失败{}".format(inspect.stack()[0][1], e))
+            raise e
+        else:
+            logger.info("投资用例{}测试通过".format(inspect.stack()[0][1]))
 
     def tearDown(self):
         self.driver.delete_all_cookies()
-
-    @classmethod
-    def tearDownClass(cls):
-        # cls.driver.quit()
-        logger.info("关闭浏览器")
 
 
 if __name__ == '__main__':
