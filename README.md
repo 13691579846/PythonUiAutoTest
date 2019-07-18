@@ -46,6 +46,8 @@ ui对象库
     2.Python run_test.py
 测试结果
     报告展示
+    ![Image](https://github.com/13691579846/PythonUiAutoTest/blob/master/img/%E7%94%A8%E4%BE%8B%E7%BB%9F%E8%AE%A1%E6%88%AA%E5%9B%BE.png)
+    ![Image](https://github.com/13691579846/PythonUiAutoTest/blob/master/img/%E7%94%A8%E4%BE%8B%E6%88%AA%E5%9B%BE.png)
     ![Image](https://github.com/13691579846/PythonUiAutoTest/blob/master/img/%E6%8A%A5%E5%91%8A%E6%88%AA%E5%9B%BE.png)
 用例进度
 
