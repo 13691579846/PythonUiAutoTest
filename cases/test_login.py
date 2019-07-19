@@ -14,8 +14,8 @@ import inspect
 
 # from datas.LoginDatas import LoginData
 from libs.ddt import ddt, data
-from common.RecordLog import logger
-from common.ParseExcel import do_excel
+from common.record_log import logger
+from common.parse_excel import do_excel
 from cases.unit_test.unit_test import MyUnitTest
 
 
@@ -48,6 +48,7 @@ class TestLogin(MyUnitTest):
                                 6,
                                 'fail',
                                 color='red')
+            self.login_page.save_screen_shot('error')
             raise e
         else:
             logger.info("测试{}通过".format(inspect.stack()[0][3]))
@@ -75,6 +76,7 @@ class TestLogin(MyUnitTest):
                                 6,
                                 'fail',
                                 color='red')
+            self.login_page.save_screen_shot('error')
             raise e
         else:
             logger.info("测试{}通过".format(inspect.stack()[0][3]))
@@ -87,7 +89,6 @@ class TestLogin(MyUnitTest):
     # @data(*LoginData.login_account_error_data)
     @data(*login_account_error_data)
     def test_login_account_error(self, value):
-        print(value['user'], value['pwd'])
         self.login_page.login(value['user'], value['pwd'])
         actual = self.login_page.get_phone_pwd_error_info
         try:
@@ -103,6 +104,7 @@ class TestLogin(MyUnitTest):
                                 6,
                                 'fail',
                                 color='red')
+            self.login_page.save_screen_shot('error')
             raise e
         else:
             logger.info("测试{}通过".format(inspect.stack()[0][3]))

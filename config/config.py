@@ -16,19 +16,20 @@ import platform
 """
 All dirs of the project
 """
-PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CONFIG_DIR = os.path.join(PROJECT_DIR, 'config')
-DATA_DIR = os.path.join(PROJECT_DIR, 'datas')
-LOG_DIR = os.path.join(PROJECT_DIR, 'log')
-REPORT_DIR = os.path.join(PROJECT_DIR, 'report')
-CASE_DIR = os.path.join(PROJECT_DIR, 'cases')
-PAGES_DIR = os.path.join(PROJECT_DIR, 'pages')
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_DIR = os.path.join(ROOT_DIR, 'config')
+DATA_DIR = os.path.join(ROOT_DIR, 'datas')
+LOG_DIR = os.path.join(ROOT_DIR, 'log')
+REPORT_DIR = os.path.join(ROOT_DIR, 'report')
+CASE_DIR = os.path.join(ROOT_DIR, 'cases')
+PAGES_DIR = os.path.join(ROOT_DIR, 'pages')
 LOCATOR_DIR = os.path.join(PAGES_DIR, 'locator')
+ERROR_IMG_DIR = os.path.join(LOG_DIR, 'img')
 """
 Test path of data and config file
 """
 OBJECT_LIBRARY_PATH = os.path.join(CONFIG_DIR, 'locator.ini')
-PROJECT_CONFIG_PATH = os.path.join(CONFIG_DIR, 'ProjectConfig.ini')
+PROJECT_CONFIG_PATH = os.path.join(CONFIG_DIR, 'config.ini')
 DATA_PATH = os.path.join(DATA_DIR, 'test_cases.xlsx')
 LOCATOR_PATH = os.path.join(LOCATOR_DIR, 'locator.ini')
 """
@@ -44,4 +45,5 @@ ENVIRONMENT = \
 
 
 if __name__ == '__main__':
+    print(ERROR_IMG_DIR)
     pass

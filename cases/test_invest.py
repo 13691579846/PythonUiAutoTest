@@ -13,11 +13,12 @@ import unittest
 import inspect
 
 from cases.unit_test.unit_test import MyUnitTest
-from datas.InvestDatas import InvestData
+from datas.invest_datas import InvestData
 from libs.ddt import ddt, data
-from common.RecordLog import logger
+from common.record_log import logger
 
 
+# TODO: perfect success test cases
 @ddt
 class TestInvest(MyUnitTest):
     """投资用例"""

@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/7/17 23:02
 @Auth : linux超
-@File : InvestDatas.py
+@File : invest_datas.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 @QQ   : 28174043@qq.com
@@ -12,6 +12,7 @@
 
 
 class InvestData(object):
+    """投资功能测试数据"""
 
     # 正确的用户名和密码
     user_password = {

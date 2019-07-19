@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/7/17 22:14
 @Auth : linux超
-@File : HomePage.py
+@File : homePage.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 @QQ   : 28174043@qq.com
@@ -10,7 +10,7 @@
 ------------------------------------
 """
 from pages.base.base import Base
-from common.ParseConfig import ParseConfig
+from common.parse_config import ParseConfig
 from config.config import LOCATOR_PATH
 
 

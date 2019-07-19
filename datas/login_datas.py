@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/7/16 9:56
 @Auth : linux超
-@File : LoginDatas.py
+@File : login_datas.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 @QQ   : 28174043@qq.com
@@ -12,6 +12,7 @@
 
 
 class LoginData(object):
+    """登录功能测试数据"""
 
     login_success_data = [
         {

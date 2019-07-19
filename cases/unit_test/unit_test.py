@@ -12,10 +12,10 @@
 import unittest
 from selenium import webdriver
 
-from common.RecordLog import logger
-from pages.HomePage import HomePage
-from pages.LoginPage import LoginPage
-from pages.LoanPage import LoanPage
+from common.record_log import logger
+from pages.homePage import HomePage
+from pages.loginPage import LoginPage
+from pages.loanPage import LoanPage
 
 
 class MyUnitTest(unittest.TestCase):

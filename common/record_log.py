@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/7/14 19:51
 @Auth : linux超
-@File : RecordLog.py
+@File : record_log.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 @QQ   : 28174043@qq.com
@@ -12,7 +12,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-from common.CreateDir import CreateDir
+from common.create_dirs import CreateDir
 from config.config import LOG_DIR
 
 

@@ -11,8 +11,8 @@
 """
 import unittest
 
-from common.RecordLog import logger
-from common.CreateDir import CreateDir
+from common.record_log import logger
+from common.create_dirs import CreateDir
 from config.config import REPORT_DIR, LOG_DIR, ENVIRONMENT
 from libs.HTMLTestRunner_cn import HTMLTestRunner
 
