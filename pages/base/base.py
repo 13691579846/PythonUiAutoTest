@@ -40,6 +40,8 @@ class Base(object):
             self.driver.get(url)
         except InvalidArgumentException as e:
             self.logger.error('加载测试地址{}失败:{}'.format(url, e))
+            self.save_screen_shot("url")
+            raise e
         else:
             self.logger.info('加载测试地址:{}'.format(url))
 
@@ -62,6 +64,8 @@ class Base(object):
             element = wait.until(lambda driver: driver.find_element(by, location))
         except (NoSuchElementException, TimeoutException) as e:
             self.logger.error('通过定位表达式{}定位元素失败:{}'.format(location, e))
+            self.save_screen_shot("find_element")
+            raise e
         else:
             return element
 
@@ -81,6 +85,8 @@ class Base(object):
             elements = wait.until(lambda driver: driver.find_elements(by, location))
         except (NoSuchElementException, TimeoutException) as e:
             self.logger.error('通过定位表达式{}定位一组元素失败:{}'.format(location, e))
+            self.save_screen_shot("find_elements")
+            raise e
         else:
             return elements
 
@@ -95,8 +101,7 @@ class Base(object):
         try:
             wait = WebDriverWait(self.driver, self.timeout)
             wait.until(ec.visibility_of_element_located((by, location)))
-        except (NoSuchElementException, TimeoutException) as e:
-            self.logger.debug('元素不({},{})存在:{}'.format(by, location, e))
+        except (NoSuchElementException, TimeoutException):
             return False
         return True
 
@@ -110,8 +115,8 @@ class Base(object):
         try:
             wait = WebDriverWait(self.driver, self.timeout)
             alert = wait.until(ec.alert_is_present())
-        except (TimeoutException, NoAlertPresentException) as e:
-            self.logger.exception('alert 不存在:{}'.format(e))
+        except (TimeoutException, NoAlertPresentException):
+            self.save_screen_shot("alert")
             return False
         return alert
 
@@ -126,8 +131,7 @@ class Base(object):
         try:
             wait = WebDriverWait(self.driver, self.timeout)
             element = wait.until(ec.element_to_be_clickable((by, location)))
-        except (TimeoutException, NoSuchElementException) as e:
-            self.logger.exception('元素{}不可点击:{}'.format(location, e))
+        except (TimeoutException, NoSuchElementException):
             return False
         return element
 
@@ -142,6 +146,7 @@ class Base(object):
             return alert.text
         else:
             self.logger.error("获取alert文本失败")
+            raise NoAlertPresentException("没有alert抛出")
 
     def switch_to_iframe(self, by: str, location: str) -> bool:
         """
@@ -154,11 +159,17 @@ class Base(object):
         try:
             wait = WebDriverWait(self.driver, self.timeout)
             wait.until(ec.frame_to_be_available_and_switch_to_it((by, location)))
-        except (TimeoutException, NoSuchElementException) as e:
-            self.logger.error("切换iframe{}失败：{}".format(location, e))
+        except (TimeoutException, NoSuchElementException):
+            self.logger.error("切换iframe{}失败".format(location))
+            self.save_screen_shot("iframe")
             return False
         else:
             return True
+
+    @property
+    def switch_default_iframe(self):
+        """切换到默认的iframe"""
+        return self.driver.switch_to.default_content()
 
     def click(self, by: str, location: str):
         """
@@ -187,8 +198,8 @@ class Base(object):
             element.send_keys(value)
         except (NoSuchElementException, TimeoutException) as e:
             self.logger.error("输入框:{}, 输入数据{}失败:{}".format(location, value, e))
-        else:
-            self.logger.info("输入框{}, 已输入数据{}".format(location, value))
+            self.save_screen_shot("send_keys")
+            raise e
 
     def get_element_text(self, by: str, location: str) -> (str, None):
         """
@@ -198,15 +209,21 @@ class Base(object):
         :return: str or bool
         """
         by = by.lower()
+        element = self.find_element(by, location)
         try:
-            element = self.find_element(by, location)
             value = element.text
-        except (NoSuchElementException, TimeoutException) as e:
-            self.logger.error("获取元素{}文本内容失败:{}".format(location, e))
-            return None
-        else:
-            self.logger.info("获取元素文本内容:{}".format(value))
-            return value
+        except AttributeError:
+            value = element.get_attribute('value')
+        self.logger.info("获取元素文本内容:{}".format(value))
+        return value
+
+    def get_element_attribute(self, by: str, location: str, attribute: str):
+        element = self.find_element(by, location)
+        try:
+            return element.get_attribute(attribute)
+        except Exception as e:
+            self.logger.error("获取元素的{}属性失败{}".format(attribute, e))
+            raise e
 
     def move_to_element_click(self, by: str, location: str):
         """
@@ -228,6 +245,7 @@ class Base(object):
             self.driver.execute_script(js)
         except InvalidArgumentException as e:
             self.logger.error("执行JS脚本失败{}".format(e))
+            raise e
 
     def save_screen_shot(self, info: str = ''):
         """
@@ -241,11 +259,35 @@ class Base(object):
         return self.driver.save_screenshot(filename)
 
     # TODO: perfecting function
-    def switch_to_window(self):
-        pass
+    def switch_to_window(self, new_window=None):
+        """
+        切换新窗口
+        :param new_window: 新窗口句柄
+        :return: 当前窗口句柄
+        """
+        if new_window is None:
+            current_handle = self.driver.window_handles
+            try:
+                wait = WebDriverWait(self.driver, self.timeout)
+                wait.until(ec.new_window_is_opened(current_handle))
+                all_handles = self.driver.window_handles
+                self.driver.switch_to.window(all_handles[-1])
+                return current_handle
+            except TimeoutException as e:
+                self.logger.error("切换窗口失败或无新窗口被打开, 无需切换窗口")
+                self.save_screen_shot("switch_window")
+                raise e
+        else:
+            self.driver.switch_to.window(new_window)
 
 
 if __name__ == '__main__':
     d = webdriver.Firefox()
     b = Base(d)
+    b.open('https://www.baidu.com')
+    b.find_element('id', 'kw').send_keys('linux超')
+    b.find_element('id', 'su').click()
+    b.find_elements('xpath', '//a[@class="c-showurl"]')[0].click()
+    b.switch_to_window()
+    print(b.find_element('xpath', '//a[@id="Header1_HeaderTitle"]').text)
     b.save_screen_shot('pass')

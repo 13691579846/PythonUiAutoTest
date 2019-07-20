@@ -9,13 +9,15 @@
 @GROUP: 878565760
 ------------------------------------
 """
-from configparser import (ConfigParser,
-                          NoOptionError,
-                          NoSectionError)
+from configparser import (
+    ConfigParser,
+    NoOptionError,
+    NoSectionError
+)
 
 
 class ParseConfig(ConfigParser):
-
+    """解析配置文件"""
     def __init__(self, filename):
         super().__init__()
         self.filename = filename

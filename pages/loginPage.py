@@ -16,15 +16,16 @@ from config.config import LOCATOR_PATH
 
 class LoginPage(Base):
 
-    config = ParseConfig(LOCATOR_PATH)
-    url = config('TestUrl', 'url')
-    phone_input = config('LoginPage', 'phone_input')  # 用户名输入框
-    password_input = config('LoginPage', 'password_input')  # 密码输入框
-    login_button = config('LoginPage', 'login_button')  # 登录按钮
+    locator = ParseConfig(LOCATOR_PATH)
 
-    login_success_info = config('LoginPage', 'login_success_info')
-    format_error_info = config('LoginPage', 'format_error_info')  # 帐号或密码格式错误
-    phone_password_error = config('LoginPage', 'phone_password_error')  # 帐号或密码错误
+    url = locator('TestUrl', 'url')
+    phone_input = locator('LoginPage', 'phone_input')  # 用户名输入框
+    password_input = locator('LoginPage', 'password_input')  # 密码输入框
+    login_button = locator('LoginPage', 'login_button')  # 登录按钮
+
+    login_success_info = locator('LoginPage', 'login_success_info')
+    format_error_info = locator('LoginPage', 'format_error_info')  # 帐号或密码格式错误
+    phone_password_error = locator('LoginPage', 'phone_password_error')  # 帐号或密码错误
 
     def login(self, phone: str, password: str):
         self.logger.info("开始登录")

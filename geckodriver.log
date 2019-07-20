@@ -1,241 +1,29 @@
-1563368984851	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.BF63cEddeLND"
-1563368987276	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
-1563368987276	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
-1563369007649	Marionette	INFO	Listening on port 50091
-1563369007938	Marionette	WARN	TLS certificate errors will be ignored for this session
-console.error: BroadcastService: 
-  receivedBroadcastMessage: handler for
-  remote-settings/monitor_changes
-  threw error:
-  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
-  Stack:
-    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:188:13
-
-1563369049681	Marionette	INFO	Stopped listening on port 50091
-[Parent 4268, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
-[Parent 4268, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
-[Child 6852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
-[Child 6852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_c[Parent 4268, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
-[Child 6984, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
-[Child 6984, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
-1563410990470	geckodriver	INFO	geckodriver 0.19.1
-1563410990486	geckodriver	INFO	Listening on 127.0.0.1:50670
-1563410994155	mozrunner::runner	INFO	Running command: "D:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\v-xug\\AppData\\Local\\Temp\\rust_mozprofile.xvtbQaCRavbf"
+1563616470057	geckodriver	INFO	geckodriver 0.19.1
+1563616470072	geckodriver	INFO	Listening on 127.0.0.1:63780
+1563616473259	mozrunner::runner	INFO	Running command: "D:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\v-xug\\AppData\\Local\\Temp\\rust_mozprofile.HMPeR5PUd79p"
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-1563410999268	Marionette	INFO	Listening on port 50678
-1563410999870	Marionette	WARN	TLS certificate errors will be ignored for this session
+1563616478014	Marionette	INFO	Listening on port 63790
+1563616478682	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
 JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
 JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
 JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
+1563616699802	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
 JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-1563411039550	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-IPDL protocol error: Handler returned error code!
-
-###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
-
-IPDL protocol error: Handler returned error code!
-
-###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
-
-IPDL protocol error: Handler returned error code!
-
-###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
-
-[Parent 12504, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Parent 12504, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[GPU 6004,
-###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
-
-1563412395729	geckodriver	INFO	geckodriver 0.19.1
-1563412395749	geckodriver	INFO	Listening on 127.0.0.1:52099
-1563412398973	mozrunner::runner	INFO	Running command: "D:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\v-xug\\AppData\\Local\\Temp\\rust_mozprofile.uw96EQn5Ztg4"
+[Child 13824, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13824, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1563616801601	geckodriver	INFO	geckodriver 0.19.1
+1563616801622	geckodriver	INFO	Listening on 127.0.0.1:64431
+1563616804747	mozrunner::runner	INFO	Running command: "D:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\v-xug\\AppData\\Local\\Temp\\rust_mozprofile.zd4sXWlH1RsQ"
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-1563412403419	Marionette	INFO	Listening on port 52107
-1563412404349	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-[Parent 12512, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 10028, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 10028, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_w*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-
-###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
-
-1563412463658	geckodriver	INFO	geckodriver 0.19.1
-1563412463689	geckodriver	INFO	Listening on 127.0.0.1:52190
-1563412467019	mozrunner::runner	INFO	Running command: "D:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\v-xug\\AppData\\Local\\Temp\\rust_mozprofile.AzPzl20VTWld"
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-1563412471386	Marionette	INFO	Listening on port 52199
-1563412472386	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js, line 52: Error: Syntax error, unrecognized expression: .c-container /deep/ .c-container
-[Parent 6408, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Parent 6408, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 12692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 12692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 13720, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-[GPU 12944, 
-###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
-
-1563417841768	geckodriver	INFO	geckodriver 0.19.1
-1563417841796	geckodriver	INFO	Listening on 127.0.0.1:55055
-1563417844851	mozrunner::runner	INFO	Running command: "D:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\v-xug\\AppData\\Local\\Temp\\rust_mozprofile.SPOt9Nlf3g1R"
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-1563417848645	Marionette	INFO	Listening on port 55063
-1563417849143	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-1563418055472	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-JavaScript error: http://120.78.128.25:8765/Public/frontend/scripts/app/controllers/index.js, line 1: TypeError: b.offset(...) is undefined
-1563418193602	geckodriver	INFO	geckodriver 0.19.1
-1563418193617	geckodriver	INFO	Listening on 127.0.0.1:55658
-1563418196783	mozrunner::runner	INFO	Running command: "D:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\v-xug\\AppData\\Local\\Temp\\rust_mozprofile.oXjYdIJugEUu"
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\v-xug\AppData\Local\openvr\openvrpaths.vrpath
-1563418200464	Marionette	INFO	Listening on port 55667
-1563418200724	Marionette	WARN	TLS certificate errors will be ignored for this session
+1563616809463	Marionette	INFO	Listening on port 64439
+1563616810097	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 13304, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346

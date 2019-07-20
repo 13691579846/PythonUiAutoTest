@@ -17,7 +17,7 @@ from config.config import LOG_DIR
 
 
 class Log(object):
-
+    """记录日志"""
     def __init__(self, name=__name__, path='log.log', level='DEBUG'):
         self._name = name
         self._path = path

@@ -9,19 +9,18 @@
 @GROUP: 878565760
 ------------------------------------
 """
-import unittest
 import inspect
 
-# from datas.LoginDatas import LoginData
 from libs.ddt import ddt, data
-from common.record_log import logger
 from common.parse_excel import do_excel
-from cases.unit_test.unit_test import MyUnitTest
+from cases.unit_test.unit_test import MyUnitTest as UnitTest
+# from datas.login_datas import LoginData
 
 
 @ddt
-class TestLogin(MyUnitTest):
+class TestLogin(UnitTest):
     """登录测试用例"""
+    # t_data = LoginData  # 可以从py文件获取测试数据
 
     login_success_data = do_excel('TestLoginSuccess')
     login_format_data = do_excel('TestFormatLoginFail')
@@ -30,7 +29,7 @@ class TestLogin(MyUnitTest):
     def setUp(self):
         self.login_page.open_url()
 
-    # @data(*LoginData.login_success_data)
+    # @data(*t_data.login_success_data)
     @data(*login_success_data)
     def test_login_success(self, value):
         self.login_page.login(value['user'], value['pwd'])
@@ -42,23 +41,23 @@ class TestLogin(MyUnitTest):
                                 actual)
             self.assertEqual(value['expect'], actual, msg='断言失败')
         except AssertionError as e:
-            logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            self.logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            self.login_page.save_screen_shot('login_fail')
             do_excel.write_cell('TestLoginSuccess',
                                 value['data_id'] + 1,
                                 6,
                                 'fail',
                                 color='red')
-            self.login_page.save_screen_shot('error')
             raise e
         else:
-            logger.info("测试{}通过".format(inspect.stack()[0][3]))
+            self.logger.info("测试{}通过".format(inspect.stack()[0][3]))
             do_excel.write_cell('TestLoginSuccess',
                                 value['data_id'] + 1,
                                 6,
                                 'pass',
                                 color='green')
 
-    # @data(*LoginData.login_format_data)
+    # @data(*t_data.login_format_data)
     @data(*login_format_data)
     def test_login_format_error(self, value):
         self.login_page.login(value['user'], value['pwd'])
@@ -70,23 +69,23 @@ class TestLogin(MyUnitTest):
                                 actual)
             self.assertEqual(value['expect'], actual, msg='断言失败')
         except AssertionError as e:
-            logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            self.logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            self.login_page.save_screen_shot('login_fail')
             do_excel.write_cell('TestFormatLoginFail',
                                 value['data_id'] + 1,
                                 6,
                                 'fail',
                                 color='red')
-            self.login_page.save_screen_shot('error')
             raise e
         else:
-            logger.info("测试{}通过".format(inspect.stack()[0][3]))
+            self.logger.info("测试{}通过".format(inspect.stack()[0][3]))
             do_excel.write_cell('TestFormatLoginFail',
                                 value['data_id'] + 1,
                                 6,
                                 'pass',
                                 color='green')
 
-    # @data(*LoginData.login_account_error_data)
+    # @data(*t_data.login_account_error_data)
     @data(*login_account_error_data)
     def test_login_account_error(self, value):
         self.login_page.login(value['user'], value['pwd'])
@@ -98,16 +97,16 @@ class TestLogin(MyUnitTest):
                                 actual)
             self.assertEqual(value['expect'], actual, msg='断言失败')
         except AssertionError as e:
-            logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            self.logger.error("测试{}失败:{}".format(inspect.stack()[0][3], e))
+            self.login_page.save_screen_shot('login_fail')
             do_excel.write_cell('TestAccountLoginFail',
                                 value['data_id'] + 1,
                                 6,
                                 'fail',
                                 color='red')
-            self.login_page.save_screen_shot('error')
             raise e
         else:
-            logger.info("测试{}通过".format(inspect.stack()[0][3]))
+            self.logger.info("测试{}通过".format(inspect.stack()[0][3]))
             do_excel.write_cell('TestAccountLoginFail',
                                 value['data_id'] + 1,
                                 6,
@@ -119,4 +118,5 @@ class TestLogin(MyUnitTest):
 
 
 if __name__ == '__main__':
+    import unittest
     unittest.main()

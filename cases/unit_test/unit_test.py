@@ -16,11 +16,13 @@ from common.record_log import logger
 from pages.homePage import HomePage
 from pages.loginPage import LoginPage
 from pages.loanPage import LoanPage
+from pages.memberPage import MemberPage
 
 
 class MyUnitTest(unittest.TestCase):
 
     driver = None
+    logger = logger
 
     @classmethod
     def setUpClass(cls):
@@ -28,12 +30,14 @@ class MyUnitTest(unittest.TestCase):
             cls.driver = webdriver.Firefox()
             cls.driver.maximize_window()
         except Exception as e:
-            logger.error('打开浏览器失败:{}', format(e))
+            cls.logger.error('打开浏览器失败:{}', format(e))
+            raise e
         else:
-            logger.info("打开浏览器:{}".format(cls.driver.name))
+            cls.logger.info("打开浏览器:{}".format(cls.driver.name))
         cls.home_page = HomePage(cls.driver)
         cls.login_page = LoginPage(cls.driver)
         cls.loan_page = LoanPage(cls.driver)
+        cls.member_page = MemberPage(cls.driver)
 
     @classmethod
     def tearDownClass(cls):

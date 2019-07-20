@@ -18,6 +18,7 @@ from libs.HTMLTestRunner_cn import HTMLTestRunner
 
 
 def cases_suite():
+    """测试套件"""
     suite = unittest.TestSuite()
     discover = unittest.defaultTestLoader.discover('.', 'test_*.py')
     suite.addTest(discover)

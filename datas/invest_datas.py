@@ -41,9 +41,16 @@ class InvestData(object):
         {
             'amount': '10',
             'expect': '投标金额必须为100的倍数'
-        },
+        }
+        # {
+        #     'amount': '100',
+        #     'expect': '购买标的金额不能大于标总金额'
+        # }
+    ]
+
+    invest_success = [
         {
-            'amount': '100',
-            'expect': '购买标的金额不能大于标总金额'
+            'amount': 100,
+            'expect': '投标成功！'
         }
     ]

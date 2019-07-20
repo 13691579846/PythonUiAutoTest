@@ -18,7 +18,7 @@ from config.config import DATA_PATH
 
 
 class ParseExcel(object):
-
+    """解析excel文件"""
     def __init__(self, filename):
         self.filename = filename
         self.wb = load_workbook(self.filename)

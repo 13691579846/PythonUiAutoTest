@@ -16,10 +16,11 @@ from config.config import LOCATOR_PATH
 
 class LoanPage(Base):
     """标详情页"""
-    config = ParseConfig(LOCATOR_PATH)
-    amount_element = config('LoanPage', 'invest_amount')  # 金额输入框
-    invest_loan_btn = config('LoanPage', 'invest_loan_btn')  # 投标按钮
-    invest_error_alert = ('xpath', '//div[@class="text-center"]')  # 投资失败的弹窗
+    locator = ParseConfig(LOCATOR_PATH)
+    amount_element = locator('LoanPage', 'invest_amount')  # 金额输入框
+    invest_loan_btn = locator('LoanPage', 'invest_loan_btn')  # 投标按钮
+    invest_error_alert = locator('LoanPage', 'invest_error_alert')  # 投资失败的弹窗
+    invest_success_element = locator('LoanPage', 'invest_success')
 
     def invest(self, value):
         """投标"""
@@ -40,6 +41,10 @@ class LoanPage(Base):
         self.logger.info("点击投资按钮")
         self.click(*self.invest_loan_btn)
 
+    def click_check_detail(self):
+        """点击详情激活按钮"""
+        self.click(*self.locator('LoanPage', 'check_details'))
+
     @property
     def get_error_info(self):
         """投资失败时投资按钮显示信息"""
@@ -51,10 +56,15 @@ class LoanPage(Base):
         return self.get_element_text(*self.invest_error_alert)
 
     @property
-    def get_remain_amount(self):
+    def get_account_remain_amount(self):
         """获取剩余金额"""
         remain_amount = self.find_element(*self.amount_element).get_attribute('data-amount')
         return remain_amount
+
+    @property
+    def get_invest_success_info(self):
+        """投资成功的弹窗文本"""
+        return self.get_element_text(*self.invest_success_element)
 
 
 if __name__ == '__main__':

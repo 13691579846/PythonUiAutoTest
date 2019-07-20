@@ -16,8 +16,8 @@ from config.config import LOCATOR_PATH
 
 class HomePage(Base):
     """首页"""
-    config = ParseConfig(LOCATOR_PATH)
-    knock_invest_button = config('HomePage', 'knock_invest_button')
+    locator = ParseConfig(LOCATOR_PATH)
+    knock_invest_button = locator('HomePage', 'knock_invest_button')
 
     @property
     def invest_button(self):
