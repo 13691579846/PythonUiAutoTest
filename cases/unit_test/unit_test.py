@@ -27,7 +27,7 @@ class MyUnitTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         try:
-            cls.driver = webdriver.Firefox()
+            cls.driver = webdriver.Chrome()
             cls.driver.maximize_window()
         except Exception as e:
             cls.logger.error('打开浏览器失败:{}', format(e))

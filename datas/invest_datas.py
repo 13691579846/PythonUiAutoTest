@@ -20,7 +20,7 @@ class InvestData(object):
             'pwd': 'python'
         }
 
-    # 测试金额大于0小于10及小于100的小数
+    # 测试金额非100倍数
     invest_amount_singular = [
         {
             'amount': '1',
@@ -32,6 +32,10 @@ class InvestData(object):
         },
         {
             'amount': '-1',
+            'expect': '请输入10的整数倍'
+        },
+        {
+            'amount': '101',
             'expect': '请输入10的整数倍'
         },
     ]
