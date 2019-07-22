@@ -29,7 +29,11 @@ class InvestData(object):
         {
             'amount': '10.1',
             'expect': '请输入10的整数倍'
-        }
+        },
+        {
+            'amount': '-1',
+            'expect': '请输入10的整数倍'
+        },
     ]
 
     # 测试金额为0，小于100整数，及大于标的剩余金额
@@ -41,11 +45,11 @@ class InvestData(object):
         {
             'amount': '10',
             'expect': '投标金额必须为100的倍数'
+        },
+        {
+            'amount': ' ',
+            'expect': '请正确填写投标金额'
         }
-        # {
-        #     'amount': '100',
-        #     'expect': '购买标的金额不能大于标总金额'
-        # }
     ]
 
     invest_success = [
