@@ -16,9 +16,9 @@ class LoginData(object):
 
     login_success_data = [
         {
-            'user': '18684720553',
-            'pwd': 'python',
-            'expect': '我的帐户[python10]'
+            'user': '***',
+            'pwd': '***',
+            'expect': '***'
         }
     ]
 
